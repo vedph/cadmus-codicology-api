@@ -1,4 +1,4 @@
-# Cadmus PRJ API
+# Cadmus Codicology API
 
 Quick Docker image build:
 
