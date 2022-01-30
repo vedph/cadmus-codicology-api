@@ -20,31 +20,15 @@
           "description": "Current and historical bindings.",
           "colorKey": "AF6465",
           "groupKey": "material",
-          "sortKey": "g"
+          "sortKey": "b"
         },
         {
-          "typeId": "it.vedph.codicology.quires",
-          "name": "quires",
-          "description": "Quires.",
+          "typeId": "it.vedph.codicology.sheet-labels",
+          "name": "sheet labels",
+          "description": "Quires and sheets labels.",
           "colorKey": "D4F672",
           "groupKey": "material",
-          "sortKey": "h"
-        },
-        {
-          "typeId": "it.vedph.codicology.quire-labels",
-          "name": "quire-labels",
-          "description": "Quires labels.",
-          "colorKey": "D4F682",
-          "groupKey": "material",
-          "sortKey": "i"
-        },
-        {
-          "typeId": "it.vedph.codicology.numberings",
-          "name": "numberings",
-          "description": "Numbering(s).",
-          "colorKey": "8047DD",
-          "groupKey": "material",
-          "sortKey": "j"
+          "sortKey": "c"
         },
         {
           "typeId": "it.vedph.codicology.material-dsc",
@@ -52,7 +36,7 @@
           "description": "Material description.",
           "colorKey": "989796",
           "groupKey": "material",
-          "sortKey": "k"
+          "sortKey": "d"
         },
         {
           "typeId": "it.vedph.codicology.watermarks",
@@ -60,7 +44,7 @@
           "description": "Watermarks.",
           "colorKey": "82DCCA",
           "groupKey": "material",
-          "sortKey": "l"
+          "sortKey": "e"
         },
         {
           "typeId": "it.vedph.codicology.contents",
@@ -68,7 +52,7 @@
           "description": "Contents: text and decoration.",
           "colorKey": "508B5E",
           "groupKey": "content",
-          "sortKey": "m"
+          "sortKey": "f"
         },
         {
           "typeId": "it.vedph.codicology.layouts",
@@ -76,7 +60,7 @@
           "description": "Text layouts.",
           "colorKey": "72EAF7",
           "groupKey": "content",
-          "sortKey": "n"
+          "sortKey": "g"
         },
         {
           "typeId": "it.vedph.codicology.decorations",
@@ -84,7 +68,7 @@
           "description": "Decorations.",
           "colorKey": "4D5EF7",
           "groupKey": "content",
-          "sortKey": "o"
+          "sortKey": "h"
         },
         {
           "typeId": "it.vedph.codicology.hands",
@@ -92,7 +76,7 @@
           "description": "Hands.",
           "colorKey": "F5C2B1",
           "groupKey": "content",
-          "sortKey": "p"
+          "sortKey": "i"
         },
         {
           "typeId": "it.vedph.codicology.edits",
@@ -100,7 +84,7 @@
           "description": "Supplementary edits on text.",
           "colorKey": "F5C2C1",
           "groupKey": "content",
-          "sortKey": "q"
+          "sortKey": "j"
         }
       ]
     }
@@ -160,20 +144,12 @@
           "value": "material"
         },
         {
-          "id": "it.vedph.codicology.numberings",
-          "value": "numberings"
-        },
-        {
-          "id": "it.vedph.codicology.quires",
-          "value": "quires"
-        },
-        {
-          "id": "it.vedph.codicology.quire-labels",
-          "value": "quire-labels"
-        },
-        {
           "id": "it.vedph.codicology.shelfmarks",
           "value": "shelfmarks"
+        },
+        {
+          "id": "it.vedph.codicology.sheet-labels",
+          "value": "sheet labels"
         },
         {
           "id": "it.vedph.codicology.watermarks",
@@ -1416,16 +1392,10 @@
         "id": "seed.it.vedph.codicology.material-dsc"
       },
       {
-        "id": "seed.it.vedph.codicology.numberings"
-      },
-      {
-        "id": "seed.it.vedph.codicology.quires"
-      },
-      {
-        "id": "seed.it.vedph.codicology.quire-labels"
-      },
-      {
         "id": "seed.it.vedph.codicology.shelfmarks"
+      },
+      {
+        "id": "seed.it.vedph.codicology.sheet-labels"
       },
       {
         "id": "seed.it.vedph.codicology.watermarks"
