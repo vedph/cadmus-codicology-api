@@ -754,7 +754,7 @@
       "entries": [
         {
           "id": "pag-inc",
-          "value": "typologies positions techniques tools lineHeight"
+          "value": "typologies positions lineHeight"
         },
         {
           "id": "ill",
@@ -766,11 +766,11 @@
         },
         {
           "id": "ini-pla",
-          "value": "gildings typologies subject textRelation"
+          "value": "typologies subject textRelation"
         },
         {
           "id": "ini-wat",
-          "value": "gildings typologies subject textRelation"
+          "value": "typologies subject textRelation"
         },
         {
           "id": "ini-orn",
@@ -782,11 +782,11 @@
         },
         {
           "id": "par",
-          "value": "gildings techniques subject textRelation lineHeight"
+          "value": "subject textRelation lineHeight"
         },
         {
           "id": "wsp",
-          "value": "colors gildings typologies positions techniques subject textRelation tools lineHeight"
+          "value": "colors gildings typologies techniques subject textRelation tools lineHeight"
         }
       ]
     },
