@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2022-08-03: updated codicology dependencies where `CodWatermark` has been modified.
+
 ### 1.2.1
 
 - 2022-07-21: updated packages.
