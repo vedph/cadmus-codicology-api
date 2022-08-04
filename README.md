@@ -2,7 +2,7 @@
 
 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-codicology-api:1.2.1 -t vedph2020/cadmus-codicology-api:latest
+    docker build . -t vedph2020/cadmus-codicology-api:1.2.2 -t vedph2020/cadmus-codicology-api:latest
 
 (replace with the current version).
 
@@ -10,6 +10,9 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+### 1.2.2
+
+- 2022-08-04: updated codicology dependencies where `CodDecorationArtist` has been modified.
 - 2022-08-03: updated codicology dependencies where `CodWatermark` has been modified.
 
 ### 1.2.1
