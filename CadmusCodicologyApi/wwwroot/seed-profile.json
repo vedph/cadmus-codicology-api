@@ -1126,19 +1126,6 @@
       ]
     },
     {
-      "id": "cod-layout-counts@en",
-      "entries": [
-        {
-          "id": "rr",
-          "value": "righe"
-        },
-        {
-          "id": "ll",
-          "value": "linee"
-        }
-      ]
-    },
-    {
       "id": "cod-layout-ruling-techniques@en",
       "entries": [
         {
@@ -1414,6 +1401,19 @@
         {
           "id": "s5",
           "value": "pessimo"
+        }
+      ]
+    },
+    {
+      "id": "decorated-count-ids@en",
+      "entries": [
+        {
+          "id": "rr",
+          "value": "righe"
+        },
+        {
+          "id": "ll",
+          "value": "linee"
         }
       ]
     },
