@@ -20,7 +20,6 @@ using Cadmus.Api.Services.Auth;
 using Cadmus.Api.Services.Messaging;
 using Cadmus.Api.Services;
 using Microsoft.AspNetCore.HttpOverrides;
-using Cadmus.Index.MySql;
 using Cadmus.Index.Sql;
 using Cadmus.Codicology.Services;
 using Cadmus.Graph;
@@ -198,8 +197,8 @@ namespace CadmusCodicologyApi
             if (!Configuration.GetSection("Preview").GetSection("IsEnabled")
                 .Get<bool>())
             {
-                return new CadmusPreviewer(repository,
-                    factoryProvider.GetFactory("{}"));
+                return new CadmusPreviewer(factoryProvider.GetFactory("{}"),
+                    repository);
             }
 
             // get profile source
@@ -211,8 +210,8 @@ namespace CadmusCodicologyApi
             {
                 Console.WriteLine($"Preview profile expected at {path} not found");
                 logger?.Error($"Preview profile expected at {path} not found");
-                return new CadmusPreviewer(repository,
-                    factoryProvider.GetFactory("{}"));
+                return new CadmusPreviewer(factoryProvider.GetFactory("{}"),
+                    repository);
             }
 
             // load profile
@@ -226,7 +225,7 @@ namespace CadmusCodicologyApi
             }
             CadmusPreviewFactory factory = factoryProvider.GetFactory(profile);
 
-            return new CadmusPreviewer(repository, factory);
+            return new CadmusPreviewer(factory, repository);
         }
 
         /// <summary>
@@ -275,7 +274,12 @@ namespace CadmusCodicologyApi
             // configuration
             services.AddSingleton(_ => Configuration);
             // repository
-            services.AddSingleton<IRepositoryProvider, CodicologyRepositoryProvider>();
+            string dataCS = string.Format(
+                Configuration.GetConnectionString("Default"),
+                Configuration.GetValue<string>("DatabaseNames:Data"));
+            services.AddSingleton<IRepositoryProvider>(
+              _ => new CodicologyRepositoryProvider { ConnectionString = dataCS });
+
             // part seeder factory provider
             services.AddSingleton<IPartSeederFactoryProvider,
                 CodicologyPartSeederFactoryProvider>();
@@ -288,8 +292,7 @@ namespace CadmusCodicologyApi
                 Configuration.GetConnectionString("Index"),
                 Configuration.GetValue<string>("DatabaseNames:Data"));
             services.AddSingleton<IItemIndexFactoryProvider>(_ =>
-                new StandardItemIndexFactoryProvider(
-                    indexCS));
+                new StandardItemIndexFactoryProvider(indexCS));
 
             // graph repository
             services.AddSingleton<IGraphRepository>(_ =>
@@ -317,7 +320,6 @@ namespace CadmusCodicologyApi
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.WithExceptionDetails()
                 .WriteTo.Console()
-                /*.WriteTo.MSSqlServer(Configuration["Serilog:ConnectionString"],*/
                 .WriteTo.MongoDBCapped(Configuration["Serilog:ConnectionString"],
                     cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
                         int.TryParse(maxSize, out int n) && n > 0 ? n : 10)
@@ -348,12 +350,19 @@ namespace CadmusCodicologyApi
                 app.UseExceptionHandler("/Error");
                 if (Configuration.GetValue<bool>("Server:UseHSTS"))
                 {
-                    Console.WriteLine("Using HSTS");
+                    Console.WriteLine("HSTS: yes");
                     app.UseHsts();
                 }
+                else Console.WriteLine("HSTS: no");
             }
 
-            app.UseHttpsRedirection();
+            if (Configuration.GetValue<bool>("Server:UseHttpsRedirection"))
+            {
+                Console.WriteLine("HttpsRedirection: yes");
+                app.UseHttpsRedirection();
+            }
+            else Console.WriteLine("HttpsRedirection: no");
+
             app.UseRouting();
             // CORS
             app.UseCors("CorsPolicy");
