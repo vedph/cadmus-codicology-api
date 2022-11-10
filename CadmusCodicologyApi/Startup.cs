@@ -79,7 +79,7 @@ namespace CadmusCodicologyApi
             {
                 origins = section.AsEnumerable()
                     .Where(p => !string.IsNullOrEmpty(p.Value))
-                    .Select(p => p.Value).ToArray();
+                    .Select(p => p.Value!).ToArray() ?? Array.Empty<string>();
             }
 
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
@@ -95,10 +95,10 @@ namespace CadmusCodicologyApi
         private void ConfigureAuthServices(IServiceCollection services)
         {
             // identity
-            string connStringTemplate = Configuration.GetConnectionString("Default");
+            string connStringTemplate = Configuration.GetConnectionString("Default")!;
 
             services.AddIdentityMongoDbProvider<ApplicationUser, ApplicationRole>(
-                options => { },
+                _ => { },
                 mongoOptions =>
                 {
                     mongoOptions.ConnectionString =
@@ -119,7 +119,7 @@ namespace CadmusCodicologyApi
                     // NOTE: remember to set the values in configuration:
                     // Jwt:SecureKey, Jwt:Audience, Jwt:Issuer
                     IConfigurationSection jwtSection = Configuration.GetSection("Jwt");
-                    string key = jwtSection["SecureKey"];
+                    string? key = jwtSection["SecureKey"];
                     if (string.IsNullOrEmpty(key))
                         throw new InvalidOperationException("Required JWT SecureKey not found");
 
@@ -265,7 +265,7 @@ namespace CadmusCodicologyApi
                 ApplicationUserRepository>();
 
             // messaging
-            // TODO: you can use another mailer service here. In this case,
+            // you can use another mailer service here. In this case,
             // also change the types in ConfigureOptionsServices.
             services.AddTransient<IMailerService, DotNetMailerService>();
             services.AddTransient<IMessageBuilderService,
@@ -275,7 +275,7 @@ namespace CadmusCodicologyApi
             services.AddSingleton(_ => Configuration);
             // repository
             string dataCS = string.Format(
-                Configuration.GetConnectionString("Default"),
+                Configuration.GetConnectionString("Default")!,
                 Configuration.GetValue<string>("DatabaseNames:Data"));
             services.AddSingleton<IRepositoryProvider>(
               _ => new CodicologyRepositoryProvider { ConnectionString = dataCS });
@@ -286,11 +286,11 @@ namespace CadmusCodicologyApi
             // item browser factory provider
             services.AddSingleton<IItemBrowserFactoryProvider>(_ =>
                 new StandardItemBrowserFactoryProvider(
-                    Configuration.GetConnectionString("Default")));
+                    Configuration.GetConnectionString("Default")!));
             // item index factory provider
             string indexCS = string.Format(
-                Configuration.GetConnectionString("Index"),
-                Configuration.GetValue<string>("DatabaseNames:Data"));
+                Configuration.GetConnectionString("Index")!,
+                Configuration.GetValue<string>("DatabaseNames:Data")!);
             services.AddSingleton<IItemIndexFactoryProvider>(_ =>
                 new StandardItemIndexFactoryProvider(indexCS));
 
@@ -314,13 +314,13 @@ namespace CadmusCodicologyApi
             // serilog
             // Install-Package Serilog.Exceptions Serilog.Sinks.MongoDB
             // https://github.com/RehanSaeed/Serilog.Exceptions
-            string maxSize = Configuration["Serilog:MaxMbSize"];
+            string? maxSize = Configuration["Serilog:MaxMbSize"];
             services.AddSingleton<Serilog.ILogger>(_ => new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.WithExceptionDetails()
                 .WriteTo.Console()
-                .WriteTo.MongoDBCapped(Configuration["Serilog:ConnectionString"],
+                .WriteTo.MongoDBCapped(Configuration["Serilog:ConnectionString"]!,
                     cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
                         int.TryParse(maxSize, out int n) && n > 0 ? n : 10)
                     .CreateLogger());
@@ -353,7 +353,10 @@ namespace CadmusCodicologyApi
                     Console.WriteLine("HSTS: yes");
                     app.UseHsts();
                 }
-                else Console.WriteLine("HSTS: no");
+                else
+                {
+                    Console.WriteLine("HSTS: no");
+                }
             }
 
             if (Configuration.GetValue<bool>("Server:UseHttpsRedirection"))
@@ -361,7 +364,10 @@ namespace CadmusCodicologyApi
                 Console.WriteLine("HttpsRedirection: yes");
                 app.UseHttpsRedirection();
             }
-            else Console.WriteLine("HttpsRedirection: no");
+            else
+            {
+                Console.WriteLine("HttpsRedirection: no");
+            }
 
             app.UseRouting();
             // CORS
@@ -369,16 +375,13 @@ namespace CadmusCodicologyApi
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
 
             // Swagger
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                string url = Configuration.GetValue<string>("Swagger:Endpoint");
+                string? url = Configuration.GetValue<string>("Swagger:Endpoint");
                 if (string.IsNullOrEmpty(url)) url = "v1/swagger.json";
                 options.SwaggerEndpoint(url, "V1 Docs");
             });

@@ -10,6 +10,7 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2022-11-10: upgraded to NET 7.
 - 2022-11-05: updated packages.
 - 2022-11-03: updated packages.
 - 2022-10-10: updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.
