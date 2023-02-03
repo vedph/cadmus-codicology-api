@@ -2,13 +2,21 @@
 
 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-codicology-api:1.2.4 -t vedph2020/cadmus-codicology-api:latest
+    docker build . -t vedph2020/cadmus-codicology-api:2.0.0 -t vedph2020/cadmus-codicology-api:latest
 
 (replace with the current version).
 
 This is a Cadmus API layer customized for the codicology project. This is not a real-world project, but just a shell built to develop and test the [Cadmus codicology library](https://github.com/vedph/cadmus-codicology). See the [documentation](https://github.com/vedph/cadmus_doc/blob/master/guide/api.md) for more.
 
 ## History
+
+### 2.0.0
+
+- 2023-02-02: migrated to new components factory. This is a breaking change for backend components, please see [this page](https://myrmex.github.io/overview/cadmus/dev/history/#2023-02-01---backend-infrastructure-upgrade). Anyway, in the end you just have to update your libraries and a single namespace reference. Benefits include:
+  - more streamlined component instantiation.
+  - more functionality in components factory, including DI.
+  - dropped third party dependencies.
+  - adopted standard MS technologies for DI.
 
 - 2023-01-24: updated packages.
 - 2022-11-10: upgraded to NET 7.
