@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2023-02-06: updated packages including Codicology parts (changed `CodUnit` range to ranges).
+
 ### 2.0.0
 
 - 2023-02-02: migrated to new components factory. This is a breaking change for backend components, please see [this page](https://myrmex.github.io/overview/cadmus/dev/history/#2023-02-01---backend-infrastructure-upgrade). Anyway, in the end you just have to update your libraries and a single namespace reference. Benefits include:
