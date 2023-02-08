@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2023-02-08: updated packages including Codicology parts (changed `CodHandSubscription` range to ranges).
+
 ### 2.0.1
 
 - 2023-02-06: updated packages including Codicology parts (changed `CodUnit` range to ranges).
