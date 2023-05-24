@@ -1,8 +1,8 @@
-# Cadmus Codicology API
+﻿# Cadmus Codicology API
 
-Quick Docker image build:
+🐋 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-codicology-api:2.2.0 -t vedph2020/cadmus-codicology-api:latest
+    docker build . -t vedph2020/cadmus-codicology-api:3.0.0 -t vedph2020/cadmus-codicology-api:latest
 
 (replace with the current version).
 
