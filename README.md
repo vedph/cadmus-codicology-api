@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2023-06-02: updated packages.
+
 ### 3.0.0
 
 - 2023-05-23: updated packages (breaking change in general parts introducing [AssertedCompositeId](https://github.com/vedph/cadmus-bricks-shell/blob/master/projects/myrmidon/cadmus-refs-asserted-ids/README.md#asserted-composite-id)) and added `pin-link-settings` thesaurus.
