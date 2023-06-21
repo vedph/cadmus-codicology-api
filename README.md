@@ -10,6 +10,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2023-06-21: updated packages.
+
 ### 4.0.0
 
 - 2023-06-02: moved to PostgreSQL.
