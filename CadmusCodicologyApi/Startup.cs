@@ -28,6 +28,7 @@ using ILogger = Serilog.ILogger;
 using Cadmus.Graph.Ef.PgSql;
 using Cadmus.Graph.Ef;
 using Cadmus.Graph.Extras;
+using Cadmus.Codicology.Graph;
 
 namespace CadmusCodicologyApi;
 
@@ -275,7 +276,7 @@ public sealed class Startup
         services.AddTransient<GraphUpdater>(provider =>
         {
             IRepositoryProvider rp = provider.GetService<IRepositoryProvider>()!;
-            return new(provider.GetService<IGraphRepository>()!)
+            GraphUpdater updater = new(provider.GetService<IGraphRepository>()!)
             {
                 // we want item-eid as an additional metadatum, derived from
                 // eid in the role-less MetadataPart of the item, when present
@@ -283,6 +284,9 @@ public sealed class Startup
                     .SetCadmusRepository(rp.CreateRepository())
                     .AddItemEid()
             };
+            // this is how to add the CodLocationMacro if needed
+            updater.AddMacro("cod-loc", new CodLocationMacro());
+            return updater;
         });
     }
 
