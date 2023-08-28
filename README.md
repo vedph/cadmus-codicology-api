@@ -2,7 +2,7 @@
 
 🐋 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-codicology-api:4.0.0 -t vedph2020/cadmus-codicology-api:latest
+    docker build . -t vedph2020/cadmus-codicology-api:4.0.1 -t vedph2020/cadmus-codicology-api:latest
 
 (replace with the current version).
 
@@ -10,6 +10,9 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+### 4.0.1
+
+- 2023-08-28: updated packages.
 - 2023-08-06: updated packages.
 - 2023-07-30: updated packages.
 - 2023-07-24: updated packages.
