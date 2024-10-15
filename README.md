@@ -2,13 +2,23 @@
 
 🐋 Quick Docker image build:
 
-    docker build . -t vedph2020/cadmus-codicology-api:5.0.1 -t vedph2020/cadmus-codicology-api:latest
+```bash
+docker build . --build-arg BUILDPLATFORM=linux -t vedph2020/cadmus-codicology-api:5.0.2 -t vedph2020/cadmus-codicology-api:latest
+docker build . --build-arg BUILDPLATFORM=arm64 -t vedph2020/cadmus-codicology-api_arm:5.0.2 -t vedph2020/cadmus-codicology-api_arm:latest
+```
 
 (replace with the current version).
 
 This is a Cadmus API layer customized for the codicology project. This is not a real-world project, but just a shell built to develop and test the [Cadmus codicology library](https://github.com/vedph/cadmus-codicology). See the [documentation](https://github.com/vedph/cadmus_doc/blob/master/guide/api.md) for more.
 
 ## History
+
+### 5.0.2
+
+- 2024-10-15:
+  - updated packages.
+  - changed Dockerfile to allow ARM builds.
+  - generated images.
 
 ### 5.0.1
 

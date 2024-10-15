@@ -1,15 +1,13 @@
 # Stage 1: base
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 443
 
 # Stage 2: build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["CadmusCodicologyApi/CadmusCodicologyApi.csproj", "CadmusCodicologyApi/"]
-# copy local packages to avoid using a NuGet custom feed, then restore
-# COPY ./local-packages /src/local-packages
 RUN dotnet restore "CadmusCodicologyApi/CadmusCodicologyApi.csproj" -s https://api.nuget.org/v3/index.json --verbosity n
 # copy the content of the API project
 COPY . .
