@@ -13,6 +13,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2024-11-20: updated packages.
+
 ### 6.0.0
 
 - 2024-11-18: ⚠️ Upgraded to .NET 9.
