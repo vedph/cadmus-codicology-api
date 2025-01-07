@@ -1,17 +1,22 @@
 ﻿# Cadmus Codicology API
 
-🐋 Quick Docker image build:
+🐋 Quick Docker image build (you need to have a `buildx` container):
 
 ```bash
-docker build . --build-arg BUILDPLATFORM=linux -t vedph2020/cadmus-codicology-api:5.0.2 -t vedph2020/cadmus-codicology-api:latest
-docker build . --build-arg BUILDPLATFORM=arm64 -t vedph2020/cadmus-codicology-api_arm:5.0.2 -t vedph2020/cadmus-codicology-api_arm:latest
+docker buildx create --use
+
+docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-codicology-api:7.0.0 -t vedph2020/cadmus-codicology-api:latest
 ```
 
 (replace with the current version).
 
+>Remember that when creating the image in this way you must add `--platform=$BUILDPLATFORM` to the `FROM` commands including ASP.NET Core SDK and runtime in the Dockerfile.
+
 This is a Cadmus API layer customized for the codicology project. This is not a real-world project, but just a shell built to develop and test the [Cadmus codicology library](https://github.com/vedph/cadmus-codicology). See the [documentation](https://github.com/vedph/cadmus_doc/blob/master/guide/api.md) for more.
 
 ## History
+
+### 7.0.0
 
 - 2024-12-26: updated packages.
 - 2024-12-18: updated packages.
