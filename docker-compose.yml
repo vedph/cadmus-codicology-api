@@ -24,10 +24,6 @@ services:
       - 5432:5432
     networks:
       - cadmus-codicology-network
-    # volumes:
-      # ensure you have created the var/db/pgsql folder in the host
-      # https://hub.docker.com/r/postgis/postgis
-      # - /var/db/pgsql:/var/lib/postgresql/data
 
   # Cadmus Codicology API
   cadmus-codicology-api:
@@ -40,11 +36,11 @@ services:
       - cadmus-codicology-mongo
       - cadmus-codicology-pgsql
     environment:
-      # for Windows use : as separator, for non Windows use __
-      # (see https://github.com/aspnet/Configuration/issues/469)
+      - ASPNETCORE_URLS=http://+:8080
       - CONNECTIONSTRINGS__DEFAULT=mongodb://cadmus-codicology-mongo:27017/{0}
+      - CONNECTIONSTRINGS__AUTH=Server=cadmus-codicology-pgsql;port=5432;Database={0};User Id=postgres;Password=postgres;Include Error Detail=True
       - CONNECTIONSTRINGS__INDEX=Server=cadmus-codicology-pgsql;port=5432;Database={0};User Id=postgres;Password=postgres;Include Error Detail=True
-      - SEED__INDEXDELAY=25
+      - SEED__DELAY=20
       - MESSAGING__APIROOTURL=http://cadmusapi.azurewebsites.net
       - MESSAGING__APPROOTURL=http://cadmusapi.com/
       - MESSAGING__SUPPORTEMAIL=support@cadmus.com
