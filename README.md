@@ -5,7 +5,7 @@
 ```bash
 docker buildx create --use
 
-docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-codicology-api:7.0.0 -t vedph2020/cadmus-codicology-api:latest --push
+docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-codicology-api:0.0.1 -t vedph2020/cadmus-codicology-api:latest --push
 ```
 
 (replace with the current version).
@@ -16,6 +16,9 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2025-03-09:
+  - added MUFI API.
+  - updated packages.
 - 2025-01-28: updated packages.
 - 2025-01-25: updated packages.
 

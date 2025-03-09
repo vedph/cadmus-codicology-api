@@ -23,6 +23,9 @@ using Microsoft.AspNetCore.Builder;
 using Cadmus.Api.Config.Services;
 using Cadmus.Api.Config;
 using Cadmus.Codicology.Services;
+using Mufi.Api.Controllers;
+using Mufi.Core;
+using Mufi.LiteDB;
 
 namespace CadmusCodicologyApi;
 
@@ -35,8 +38,7 @@ public static class Program
         IConfiguration config)
     {
         // Cadmus repository
-        string dataCS = string.Format(
-        config.GetConnectionString("Default")!,
+        string dataCS = string.Format(config.GetConnectionString("Default")!,
             config.GetValue<string>("DatabaseNames:Data"));
         services.AddSingleton<IRepositoryProvider>(
             _ => new CodicologyRepositoryProvider { ConnectionString = dataCS });
@@ -56,6 +58,17 @@ public static class Program
 
         // previewer
         services.AddSingleton(p => ServiceConfigurator.GetPreviewer(p, config));
+
+        // MUFI
+        services.AddSingleton<IMufiRepository>(_ =>
+        {
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            return new LiteDBMufiRepository(
+                new MufiRepositoryOptions
+                {
+                    Source = Path.Combine(path, "mufi.db")
+                });
+        });
     }
 
     /// <summary>
@@ -78,8 +91,14 @@ public static class Program
         services.AddHttpClient();
         services.AddResponseCaching();
 
+        // app services
+        ConfigureAppServices(services, config);
+
         // API controllers
-        services.AddControllers();
+        services.AddControllers()
+            .AddApplicationPart(typeof(MufiController).Assembly)
+            .AddControllersAsServices();
+
         // camel-case JSON in response
         services.AddMvc()
             // https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-2.2&tabs=visual-studio#jsonnet-support
@@ -102,9 +121,6 @@ public static class Program
 
         // logging
         ServiceConfigurator.ConfigureLogging(services);
-
-        // app services
-        ConfigureAppServices(services, config);
     }
 
     /// <summary>
