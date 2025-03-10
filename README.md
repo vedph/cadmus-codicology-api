@@ -16,6 +16,7 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2025-03-10: updated packages.
 - 2025-03-09:
   - added MUFI API.
   - updated packages.
