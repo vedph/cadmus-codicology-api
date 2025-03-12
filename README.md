@@ -16,7 +16,9 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
-- 2025-03-12: ⚠️ updated packages bumping models to v8 and adding some thesauri for them.
+- 2025-03-12:
+  - ⚠️ updated packages bumping models to v8 and adding some thesauri for them.
+  - added MUFI support.
 - 2025-03-09:
   - added MUFI API.
   - updated packages.
