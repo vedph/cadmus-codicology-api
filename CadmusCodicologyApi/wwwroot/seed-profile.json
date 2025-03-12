@@ -254,6 +254,32 @@
       ]
     },
     {
+      "id": "cod-content-annotation-features@en",
+      "entries": [
+        {
+          "id": "a",
+          "value": "alpha"
+        },
+        {
+          "id": "b",
+          "value": "beta"
+        }
+      ]
+    },
+    {
+      "id": "cod-content-annotation-languages@en",
+      "entries": [
+        {
+          "id": "ita",
+          "value": "italiano"
+        },
+        {
+          "id": "lat",
+          "value": "latino"
+        }
+      ]
+    },
+    {
       "id": "cod-content-annotation-types@en",
       "entries": [
         {
@@ -1122,6 +1148,28 @@
         {
           "id": "other",
           "value": "altro"
+        }
+      ]
+    },
+    {
+      "id": "cod-labels-col-n-features@en",
+      "entries": [
+        {
+          "id": "a",
+          "value": "alpha"
+        },
+        {
+          "id": "b",
+          "value": "beta"
+        }
+      ]
+    },
+    {
+      "id": "cod-labels-col-q-features@en",
+      "entries": [
+        {
+          "id": "quire-break",
+          "value": "cesura fasc."
         }
       ]
     },
