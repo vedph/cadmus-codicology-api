@@ -1164,6 +1164,257 @@
       ]
     },
     {
+      "id": "cod-illum-instruction-colors@en",
+      "entries": [
+        {
+          "id": "black",
+          "value": "nero"
+        },
+        {
+          "id": "brown",
+          "value": "bruno"
+        },
+        {
+          "id": "red",
+          "value": "rosso"
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-feats@en",
+      "entries": [
+        {
+          "id": "beneath",
+          "value": "sotto pellicola"
+        },
+        {
+          "id": "mirrored",
+          "value": "speculare"
+        },
+        {
+          "id": "erased",
+          "value": "cancellata"
+        },
+        {
+          "id": "faded",
+          "value": "evanida"
+        },
+        {
+          "id": "trimmed",
+          "value": "rifilata"
+        },
+        {
+          "id": "rewritten",
+          "value": "riscritta"
+        },
+        {
+          "id": "topographic",
+          "value": "topografica"
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-languages@en",
+      "entries": [
+        {
+          "id": "ita",
+          "value": "italiano"
+        },
+        {
+          "id": "fre",
+          "value": "francese"
+        },
+        {
+          "id": "lat",
+          "value": "latino"
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-scripts@en",
+      "entries": [
+        {
+          "id": "bastarda",
+          "value": "bastarda"
+        },
+        {
+          "id": "bastarda-chancery",
+          "value": "bastarda cancelleresca"
+        },
+        {
+          "id": "cursive",
+          "value": "corsiva"
+        },
+        {
+          "id": "cursive-notarial",
+          "value": "corsiva notarile"
+        },
+        {
+          "id": "cursive-humanistic",
+          "value": "corsiva umanistica"
+        },
+        {
+          "id": "merchant",
+          "value": "mercantesca"
+        },
+        {
+          "id": "textualis",
+          "value": "littera textualis"
+        },
+        {
+          "id": "textualis-simplified",
+          "value": "littera textualis sempl."
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-tools@en",
+      "entries": [
+        {
+          "id": "pen",
+          "value": "penna"
+        },
+        {
+          "id": "pencil",
+          "value": "lapis"
+        },
+        {
+          "id": "lead-point",
+          "value": "mina di piombo"
+        },
+        {
+          "id": "dry-point",
+          "value": "punta secca"
+        },
+        {
+          "id": "silver-point",
+          "value": "punta d'argento"
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-types@en",
+      "entries": [
+        {
+          "id": "rubrics",
+          "value": "rubriche"
+        },
+        {
+          "id": "instructions",
+          "value": "istruzioni"
+        },
+        {
+          "id": "instructions.:text",
+          "value": "istruzioni scritte"
+        },
+        {
+          "id": "instructions.guide",
+          "value": "istruzioni: guida"
+        },
+        {
+          "id": "instructions.ref",
+          "value": "istruzioni: rimando"
+        },
+        {
+          "id": "instructions.visual",
+          "value": "istruzioni: visive"
+        },
+        {
+          "id": "instructions.shorthand",
+          "value": "istruzioni: abbreviate"
+        },
+        {
+          "id": "instructions.color",
+          "value": "istruzioni: colore"
+        },
+        {
+          "id": "instructions.background",
+          "value": "istruzioni: sfondi"
+        },
+        {
+          "id": "references",
+          "value": "richiami"
+        },
+        {
+          "id": "references.alpha",
+          "value": "richiami: alfabetici"
+        },
+        {
+          "id": "references.alpha.lat",
+          "value": "richiami: alfabetici: latino"
+        },
+        {
+          "id": "references.alpha.grc",
+          "value": "richiami: alfabetici: greco"
+        },
+        {
+          "id": "references.num",
+          "value": "richiami: numerici"
+        },
+        {
+          "id": "references.num.roman",
+          "value": "richiami: numerici: romani"
+        },
+        {
+          "id": "references.num.arabic",
+          "value": "richiami: numerici: arabi"
+        },
+        {
+          "id": "references.sym",
+          "value": "richiami: simbolici"
+        }
+      ]
+    },
+    {
+      "id": "cod-illum-instruction-positions@en",
+      "entries": [
+        {
+          "id": "margin-top",
+          "value": "margine sup."
+        },
+        {
+          "id": "margin-inner",
+          "value": "margine int."
+        },
+        {
+          "id": "margin-outer",
+          "value": "margine est."
+        },
+        {
+          "id": "margin-bottom",
+          "value": "margine inf."
+        },
+        {
+          "id": "margin-bottom-inner",
+          "value": "margine inf. int."
+        },
+        {
+          "id": "margin-bottom-outer",
+          "value": "margine inf. est."
+        },
+        {
+          "id": "reserved",
+          "value": "area riservata"
+        },
+        {
+          "id": "intercolumn",
+          "value": "intercolumnio"
+        },
+        {
+          "id": "intercolumn-top",
+          "value": "intercolumnio sup."
+        },
+        {
+          "id": "intercolumn-bottom",
+          "value": "intercolumnio inf."
+        },
+        {
+          "id": "other-support",
+          "value": "altro supporto"
+        }
+      ]
+    },
+    {
       "id": "cod-labels-col-n-features@en",
       "entries": [
         {
