@@ -408,7 +408,7 @@
         },
         {
           "id": "pag-inc.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         },
         {
           "id": "pag-inc.ill",
@@ -428,7 +428,7 @@
         },
         {
           "id": "pag-dec.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         },
         {
           "id": "pag-dec.ill",
@@ -476,7 +476,7 @@
         },
         {
           "id": "ini-wat.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         },
         {
           "id": "ini-wat.guide",
@@ -488,7 +488,7 @@
         },
         {
           "id": "ini-orn.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         },
         {
           "id": "ini-orn.guide",
@@ -500,10 +500,22 @@
         },
         {
           "id": "ini-fig.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         },
         {
           "id": "ini-fig.guide",
+          "value": "lettere guida"
+        },
+        {
+          "id": "ini-his.blank",
+          "value": "spazio bianco"
+        },
+        {
+          "id": "ini-his.sketch",
+          "value": "incompiuto"
+        },
+        {
+          "id": "ini-his.guide",
           "value": "lettere guida"
         },
         {
@@ -512,7 +524,7 @@
         },
         {
           "id": "par.sketch",
-          "value": "bozza"
+          "value": "incompiuto"
         }
       ]
     },
@@ -629,6 +641,18 @@
           "value": "annegata"
         },
         {
+          "id": "ini-his.aligned",
+          "value": "allineata"
+        },
+        {
+          "id": "ini-his.hanging",
+          "value": "sporgente"
+        },
+        {
+          "id": "ini-his.inside",
+          "value": "annegata"
+        },
+        {
           "id": "orn.-",
           "value": ""
         },
@@ -709,6 +733,10 @@
         },
         {
           "id": "ini-fig",
+          "value": "iniziali figurate"
+        },
+        {
+          "id": "ini-his",
           "value": "iniziali istoriate"
         },
         {
@@ -755,14 +783,6 @@
         {
           "id": "ill.papyrus",
           "value": "campo libero"
-        },
-        {
-          "id": "ini-fig.fig",
-          "value": "figurata"
-        },
-        {
-          "id": "ini-fig.hist",
-          "value": "istoriata"
         },
         {
           "id": "ini-orn.braided",

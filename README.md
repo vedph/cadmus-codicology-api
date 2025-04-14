@@ -18,6 +18,7 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ### 7.0.1
 
+- 2025-04-14: updated thesauri.
 - 2025-04-10:
   - updated packages.
   - updated thesauri for decorations.
