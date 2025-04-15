@@ -741,7 +741,7 @@
         },
         {
           "id": "par",
-          "value": "paragrafematici"
+          "value": "peritestuali"
         },
         {
           "id": "wsp",
@@ -1072,7 +1072,7 @@
         },
         {
           "id": "para",
-          "value": "segni paragrafematici"
+          "value": "segni peritestuali"
         },
         {
           "id": "title",
@@ -1267,7 +1267,7 @@
         },
         {
           "id": "para",
-          "value": "segni paragrafematici"
+          "value": "segni peritestuali"
         },
         {
           "id": "title",
