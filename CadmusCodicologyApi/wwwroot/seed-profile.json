@@ -932,23 +932,23 @@
       "entries": [
         {
           "id": "pag-inc",
-          "value": "typologies positions lineHeight"
+          "value": "typologies positions lineHeight scriptRef"
         },
         {
           "id": "pag-dec",
-          "value": "typologies positions lineHeight"
+          "value": "typologies positions lineHeight scriptRef"
         },
         {
           "id": "ill",
-          "value": "lineHeight"
+          "value": "lineHeight scriptRef"
         },
         {
           "id": "orn",
-          "value": "lineHeight"
+          "value": "lineHeight scriptRef"
         },
         {
           "id": "dia",
-          "value": "lineHeight"
+          "value": "lineHeight scriptRef"
         },
         {
           "id": "ini-pla",
@@ -968,7 +968,7 @@
         },
         {
           "id": "wsp",
-          "value": "colors gildings typologies techniques subject textRelation tools lineHeight"
+          "value": "colors gildings typologies techniques subject textRelation tools lineHeight scriptRef"
         }
       ]
     },
