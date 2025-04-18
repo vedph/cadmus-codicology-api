@@ -357,6 +357,10 @@
           "value": "bottega"
         },
         {
+          "id": "scribe",
+          "value": "copista"
+        },
+        {
           "id": "other",
           "value": "altro"
         }
