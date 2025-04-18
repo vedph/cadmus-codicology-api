@@ -85,14 +85,6 @@
           "colorKey": "E72A8E",
           "groupKey": "content",
           "sortKey": "j"
-        },
-        {
-          "typeId": "it.vedph.codicology.illum-instructions",
-          "name": "instructions",
-          "description": "Instructions for illuminators.",
-          "colorKey": "DDB967",
-          "groupKey": "content",
-          "sortKey": "k"
         }
       ]
     }
@@ -142,10 +134,6 @@
         {
           "id": "it.vedph.codicology.hands",
           "value": "hands"
-        },
-        {
-          "id": "it.vedph.codicology.illum-instructions",
-          "value": "instructions"
         },
         {
           "id": "it.vedph.codicology.layouts",
@@ -1946,9 +1934,6 @@
       },
       {
         "id": "seed.it.vedph.codicology.hands"
-      },
-      {
-        "id": "seed.it.vedph.codicology.illum-instructions"
       },
       {
         "id": "seed.it.vedph.codicology.layouts"
