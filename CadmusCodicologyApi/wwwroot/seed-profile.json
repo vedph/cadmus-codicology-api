@@ -459,6 +459,14 @@
           "value": "incompiuto"
         },
         {
+          "id": "dia.blank",
+          "value": "spazi bianchi"
+        },
+        {
+          "id": "dia.sketch",
+          "value": "incompiuto"
+        },        
+        {
           "id": "ini-pla.blank",
           "value": "spazio bianco"
         },
@@ -593,6 +601,10 @@
           "value": "altro"
         },
         {
+          "id": "dia.-",
+          "value": ""
+        },
+        {
           "id": "ini-pla.aligned",
           "value": "allineata"
         },
@@ -718,6 +730,10 @@
         {
           "id": "orn",
           "value": "ornamentazione"
+        },
+        {
+          "id": "dia",
+          "value": "diagramma"
         },
         {
           "id": "ini-pla",
@@ -928,6 +944,10 @@
         },
         {
           "id": "orn",
+          "value": "lineHeight"
+        },
+        {
+          "id": "dia",
           "value": "lineHeight"
         },
         {
