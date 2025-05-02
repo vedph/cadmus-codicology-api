@@ -16,6 +16,12 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+### 8.0.0
+
+- 2025-05-02:
+  - updated packages ([migration V3](https://github.com/vedph/cadmus-migration-v3).
+  - updated preview configuration.
+
 ### 7.0.2
 
 - 2025-04-18:
