@@ -366,6 +366,10 @@
           "value": "rosso"
         },
         {
+          "id": "purplered",
+          "value": "porpora"
+        },
+        {
           "id": "green",
           "value": "verde"
         },
@@ -382,8 +386,12 @@
           "value": "viola"
         },
         {
-          "id": "turquoise",
+          "id": "lightblue",
           "value": "turchese"
+        },
+        {
+          "id": "pink",
+          "value": "rosa"
         },
         {
           "id": "other",
@@ -924,11 +932,11 @@
       "entries": [
         {
           "id": "pag-inc",
-          "value": "typologies positions lineHeight refSign"
+          "value": "positions lineHeight refSign"
         },
         {
           "id": "pag-dec",
-          "value": "typologies positions lineHeight refSign"
+          "value": "positions lineHeight refSign"
         },
         {
           "id": "ill",
@@ -1829,6 +1837,10 @@
     {
       "id": "cod-unit-states@en",
       "entries": [
+        {
+          "id": "s0",
+          "value": "---"
+        },
         {
           "id": "s1",
           "value": "ottimo"
