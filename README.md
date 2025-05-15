@@ -16,6 +16,9 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2025-05-15:
+  - updated packages (added quire data to sheet labels).
+  - added mock `cod-quire-features` thesaurus.
 - 2025-05-14:
   - updated packages.
   - updated thesauri.

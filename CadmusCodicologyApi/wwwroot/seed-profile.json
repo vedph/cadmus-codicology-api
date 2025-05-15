@@ -1722,6 +1722,19 @@
       ]
     },
     {
+      "id": "cod-quire-features@en",
+      "entries": [
+        {
+          "id": "a",
+          "value": "alpha"
+        },
+        {
+          "id": "b",
+          "value": "beta"
+        }
+      ]
+    },
+    {
       "id": "cod-quiresig-positions@en",
       "entries": [
         {
