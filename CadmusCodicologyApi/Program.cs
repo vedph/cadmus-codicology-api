@@ -219,7 +219,7 @@ public static class Program
             app.MapScalarApiReference(options =>
             {
                 options.WithTitle("Cadmus Codicology API")
-                       .WithPreferredScheme("Bearer");
+                       .AddPreferredSecuritySchemes("Bearer");
             });
             Log.Information("Running API");
             await app.RunAsync();
