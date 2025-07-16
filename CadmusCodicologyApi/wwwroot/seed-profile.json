@@ -1029,6 +1029,10 @@
           "value": "italiano"
         },
         {
+          "id": "ita-vlg",
+          "value": "italiano volgare"
+        },
+        {
           "id": "lat",
           "value": "latino"
         },
