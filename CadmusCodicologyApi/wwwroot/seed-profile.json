@@ -268,16 +268,7 @@
     },
     {
       "id": "cod-content-annotation-languages@en",
-      "entries": [
-        {
-          "id": "ita",
-          "value": "italiano"
-        },
-        {
-          "id": "lat",
-          "value": "latino"
-        }
-      ]
+      "targetId": "cod-edit-languages"
     },
     {
       "id": "cod-content-annotation-types@en",
@@ -1005,15 +996,15 @@
           "value": "---"
         },
         {
-          "id": "eng",
+          "id": "en",
           "value": "inglese"
         },
         {
-          "id": "fre",
+          "id": "fr",
           "value": "francese"
         },
         {
-          "id": "deu",
+          "id": "de",
           "value": "tedesco"
         },
         {
@@ -1021,32 +1012,32 @@
           "value": "greco"
         },
         {
-          "id": "gre",
+          "id": "el",
           "value": "neogreco"
         },
         {
-          "id": "ita",
+          "id": "it",
           "value": "italiano"
         },
         {
-          "id": "ita-vlg",
+          "id": "it-x-vulgar",
           "value": "italiano volgare"
         },
         {
-          "id": "lat",
+          "id": "la",
           "value": "latino"
         },
         {
-          "id": "lat-vlg",
+          "id": "la-x-vulgar",
           "value": "latino volgare"
         },
         {
-          "id": "spa",
-          "value": "spagnolo"
+          "id": "la-x-mix-it-vulgar",
+          "value": "latino+volgare"
         },
         {
-          "id": "other",
-          "value": "altro"
+          "id": "es",
+          "value": "spagnolo"
         }
       ]
     },
@@ -1239,28 +1230,7 @@
     },
     {
       "id": "cod-hand-subscription-languages@en",
-      "entries": [
-        {
-          "id": "ita",
-          "value": "italiano"
-        },
-        {
-          "id": "lat",
-          "value": "latino"
-        },
-        {
-          "id": "grc",
-          "value": "greco"
-        },
-        {
-          "id": "lat-vlg",
-          "value": "latino volgare"
-        },
-        {
-          "id": "other",
-          "value": "altro"
-        }
-      ]
+      "targetId": "cod-edit-languages"
     },
     {
       "id": "cod-hand-typologies@en",
@@ -1363,20 +1333,7 @@
     },
     {
       "id": "cod-illum-instruction-languages@en",
-      "entries": [
-        {
-          "id": "ita",
-          "value": "italiano"
-        },
-        {
-          "id": "fre",
-          "value": "francese"
-        },
-        {
-          "id": "lat",
-          "value": "latino"
-        }
-      ]
+      "targetId": "cod-edit-languages"
     },
     {
       "id": "cod-illum-instruction-scripts@en",
