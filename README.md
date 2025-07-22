@@ -5,7 +5,7 @@
 ```bash
 docker buildx create --use
 
-docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-codicology-api:8.0.7 -t vedph2020/cadmus-codicology-api:latest --push
+docker buildx build . --platform linux/amd64,linux/arm64,windows/amd64,windows/arm64 -t vedph2020/cadmus-codicology-api:8.0.8 -t vedph2020/cadmus-codicology-api:latest --push
 ```
 
 (replace with the current version).
@@ -16,8 +16,10 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+### 8.0.8
+
 - 2025-07-22: updated packages.
-- 2025-07-16: updated thesauri.
+- 2025-07-16: updated thesauri to use BCP47 for languages. Custom subtags are used for languages like vulgar Latin (`la-x-vulgar`) or _pastiches_ mixing Latin and Vulgar Italian (`la-x-mix-it-vulgar`).
 
 ### 8.0.7
 
