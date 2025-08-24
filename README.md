@@ -16,6 +16,8 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2025-08-24: updated packages.
+
 ### 8.0.10
 
 - 2025-08-07: updated packages.
