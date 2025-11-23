@@ -16,6 +16,7 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2025-11-23: ⚠️ upgraded to NET 10.
 - 2025-11-09:
   - updated packages.
   - added settings for shelfmarks part.
