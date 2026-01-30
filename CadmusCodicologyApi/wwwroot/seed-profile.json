@@ -296,6 +296,68 @@
       ]
     },
     {
+      "id": "cod-content-gap-tags@en",
+      "entries": [
+        {
+          "id": "complete",
+          "value": "completa"
+        },
+        {
+          "id": "partial",
+          "value": "parziale"
+        }
+      ]
+    },
+    {
+      "id": "cod-content-gap-types@en",
+      "entries": [
+        {
+          "id": "mat-cutting",
+          "value": "materiale: taglio"
+        },
+        {
+          "id": "mat-burning",
+          "value": "materiale: bruciatura"
+        },
+        {
+          "id": "mat-erasure",
+          "value": "materiale: rasura"
+        },
+        {
+          "id": "mat-loss",
+          "value": "materiale: caduta"
+        },
+        {
+          "id": "mat-trimming",
+          "value": "materiale: rifilatura"
+        },
+        {
+          "id": "mat-worming",
+          "value": "materiale: tarlatura"
+        },
+        {
+          "id": "tx-blank",
+          "value": "trasmissione: spazio"
+        },
+        {
+          "id": "tx-supplied",
+          "value": "trasmissione: supplita"
+        },
+        {
+          "id": "tx-vacat",
+          "value": "trasmissione: vacat/riempitivo"
+        },
+        {
+          "id": "tx-unnotified",
+          "value": "trasmissione: non notificata"
+        },
+        {
+          "id": "tx-notified",
+          "value": "trasmissione: notificata"
+        }
+      ]
+    },
+    {
       "id": "cod-content-states@en",
       "entries": [
         {
@@ -456,7 +518,7 @@
         {
           "id": "dia.sketch",
           "value": "incompiuto"
-        },        
+        },
         {
           "id": "ini-pla.blank",
           "value": "spazio bianco"
