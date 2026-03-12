@@ -16,6 +16,7 @@ This is a Cadmus API layer customized for the codicology project. This is not a 
 
 ## History
 
+- 2026-03-12: updated packages.
 - 2026-03-01: updated packages.
 - 2026-02-04: updated packages.
 - 2026-01-30: updated packages and added `cod-content-gap-*` thesauri.
