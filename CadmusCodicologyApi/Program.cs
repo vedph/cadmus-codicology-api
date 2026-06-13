@@ -66,58 +66,6 @@ public static class Program
     }
 
     /// <summary>
-    /// Configures the services.
-    /// </summary>
-    /// <param name="services">The services.</param>
-    public static void ConfigureServices(IServiceCollection services,
-        IConfiguration config, IHostEnvironment hostEnvironment)
-    {
-        // configuration
-        services.AddSingleton(_ => config);
-        ServiceConfigurator.ConfigureOptionsServices(services, config);
-
-        // security
-        ServiceConfigurator.ConfigureCorsServices(services, config);
-        ServiceConfigurator.ConfigureRateLimiterService(services, config, hostEnvironment);
-        ServiceConfigurator.ConfigureAuthServices(services, config);
-
-        // proxy
-        services.AddHttpClient();
-        services.AddResponseCaching();
-
-        // app services
-        ConfigureAppServices(services, config);
-
-        // API controllers
-        services.AddControllers()
-            .AddApplicationPart(typeof(MufiController).Assembly)
-            .AddControllersAsServices();
-
-        // camel-case JSON in response
-        services.AddMvc()
-            // https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-2.2&tabs=visual-studio#jsonnet-support
-            .AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.PropertyNamingPolicy =
-                    JsonNamingPolicy.CamelCase;
-            });
-
-        // framework services
-        // IMemoryCache: https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory
-        services.AddMemoryCache();
-
-        // user repository service
-        services.AddScoped<IUserRepository<NamedUser>,
-            UserRepository<NamedUser, IdentityRole>>();
-
-        // messaging
-        ServiceConfigurator.ConfigureMessagingServices(services);
-
-        // logging
-        ServiceConfigurator.ConfigureLogging(services);
-    }
-
-    /// <summary>
     /// Entry point.
     /// </summary>
     /// <param name="args">The arguments.</param>
