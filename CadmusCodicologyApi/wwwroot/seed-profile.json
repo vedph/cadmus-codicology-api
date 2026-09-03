@@ -3021,6 +3021,9 @@
   "settings": {
     "it.vedph.codicology.shelfmarks": {
       "cityFromLibPattern": "\\((.+)\\)$"
+    },
+    "it.vedph.codicology.decorations": {
+      "hideArtists": true
     }
   }
 }
