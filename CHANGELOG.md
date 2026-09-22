@@ -1,0 +1,226 @@
+# History
+
+- 2026-09-22: updated packages and added new `CodLocationRangesPart` to configuration.
+- 2026-07-21: updated packages.
+- 2026-06-13: updated packages.
+- 2026-03-12: updated packages.
+- 2026-03-01: updated packages.
+- 2026-02-04: updated packages.
+- 2026-01-30: updated packages and added `cod-content-gap-*` thesauri.
+- 2025-11-23: ⚠️ upgraded to NET 10.
+- 2025-11-09:
+  - updated packages.
+  - added settings for shelfmarks part.
+  - added to thesauri a list of libraries from a sample Excel document where A=cityand B=library, adapting it as follows:
+	- save as CSV.
+	- apply this replacement: find `^([^;]+);([^\n\r]+)([\n\r])` and replace with `$2 ($1)$3` (=move city after library name in parentheses).
+	- added a new thesaurus entry `cod-shelfmark-libraries@en` and used this prompt to convert the result into thesauri entries: `Convert the following list of strings into JSON entries for the newly added cod-shelfmark-libraries@en object. Each line must become an entry in entries, having value=string, and id=identifier built from value by lowercasing it, removing the final city in (), removing all non-letter characters, trim, replace inner spaces with dashes, and remove diacritics from letters. If this ID happens to be equal to any of the others, append to it the city name after a dash. Here is the list: ...`.
+
+## 8.0.12
+
+- 2025-09-19: updated packages.
+
+## 8.0.11
+
+- 2025-09-15: updated packages.
+- 2025-09-12: updated packages.
+- 2025-08-28: updated packages.
+- 2025-08-24: updated packages.
+
+## 8.0.10
+
+- 2025-08-07: updated packages.
+
+## 8.0.9
+
+- 2025-07-30: updated packages.
+
+## 8.0.8
+
+- 2025-07-22: updated packages.
+- 2025-07-16: updated thesauri to use BCP47 for languages. Custom subtags are used for languages like vulgar Latin (`la-x-vulgar`) or _pastiches_ mixing Latin and Vulgar Italian (`la-x-mix-it-vulgar`).
+
+## 8.0.7
+
+- 2025-07-15: updated packages (added `formula` to layout).
+
+## 8.0.6
+
+- 2025-07-14: updated packages.
+- 2025-07-03: updated packages.
+
+## 8.0.5
+
+- 2025-06-26: updated packages and image.
+
+## 8.0.4
+
+- 2025-06-01: updated packages.
+
+## 8.0.3
+
+- 2025-05-23:
+  - updated thesauri.
+  - updated packages.
+
+## 8.0.2
+
+- 2025-05-15:
+  - updated packages (added quire data to sheet labels).
+  - added mock `cod-quire-features` thesaurus.
+- 2025-05-14:
+  - updated packages.
+  - updated thesauri.
+
+## 8.0.1
+
+- 2025-05-06:
+  - updated packages.
+  - Docker images.
+
+## 8.0.0
+
+- 2025-05-02:
+  - updated packages ([migration V3](https://github.com/vedph/cadmus-migration-v3).
+  - updated preview configuration.
+
+## 7.0.2
+
+- 2025-04-18:
+  - updated thesauri.
+  - updated packages.
+
+## 7.0.1
+
+- 2025-04-14: updated thesauri.
+- 2025-04-10:
+  - updated packages.
+  - updated thesauri for decorations.
+- 2025-03-14: updated packages and added illuminator instruction part's thesauri.
+- 2025-03-12:
+  - ⚠️ updated packages bumping models to v8 and adding some thesauri for them.
+  - added MUFI support.
+- 2025-03-09:
+  - added MUFI API.
+  - updated packages.
+- 2025-01-28: updated packages.
+- 2025-01-25: updated packages.
+
+## 7.0.0
+
+- 2024-12-26: updated packages.
+- 2024-12-18: updated packages.
+- 2024-12-06: updated packages.
+- 2024-11-30: updated packages.
+- 2024-11-20: updated packages.
+
+## 6.0.0
+
+- 2024-11-18: ⚠️ Upgraded to .NET 9.
+
+## 5.0.2
+
+- 2024-10-15:
+  - updated packages.
+  - changed Dockerfile to allow ARM builds.
+  - generated images.
+
+## 5.0.1
+
+- 2024-06-09: updated packages.
+- 2024-05-24: updated packages.
+- 2024-04-13: updated packages.
+- 2023-11-21: updated packages.
+
+## 5.0.0
+
+- 2023-11-18: ⚠️ Upgraded to .NET 8.
+- 2023-09-11: updated packages
+
+## 4.0.1
+
+- 2023-08-28: updated packages.
+- 2023-08-06: updated packages.
+- 2023-07-30: updated packages.
+- 2023-07-24: updated packages.
+- 2023-07-17: updated packages.
+- 2023-06-21: updated packages.
+
+## 4.0.0
+
+- 2023-06-02: moved to PostgreSQL.
+
+## 3.0.0
+
+- 2023-05-23: updated packages (breaking change in general parts introducing [AssertedCompositeId](https://github.com/vedph/cadmus-bricks-shell/blob/master/projects/myrmidon/cadmus-refs-asserted-ids/README.md#asserted-composite-id)) and added `pin-link-settings` thesaurus.
+
+## 2.2.0
+
+- 2023-05-17: updated packages (Codicology models changes).
+- 2023-05-16: updated packages.
+- 2023-04-21: updated packages.
+
+## 2.1.0
+
+- 2023-03-25: updated packages including Codicology parts (minor model refinements).
+
+## 2.0.2
+
+- 2023-02-08: updated packages including Codicology parts (changed `CodHandSubscription` range to ranges).
+
+## 2.0.1
+
+- 2023-02-06: updated packages including Codicology parts (changed `CodUnit` range to ranges).
+
+## 2.0.0
+
+- 2023-02-02: migrated to new components factory. This is a breaking change for backend components, please see [this page](https://myrmex.github.io/overview/cadmus/dev/history/#2023-02-01---backend-infrastructure-upgrade). Anyway, in the end you just have to update your libraries and a single namespace reference. Benefits include:
+  - more streamlined component instantiation.
+  - more functionality in components factory, including DI.
+  - dropped third party dependencies.
+  - adopted standard MS technologies for DI.
+
+- 2023-01-24: updated packages.
+- 2022-11-10: upgraded to NET 7.
+- 2022-11-05: updated packages.
+- 2022-11-03: updated packages.
+- 2022-10-10: updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.
+
+## 1.2.4
+
+- 2022-09-15: updated packages.
+
+## 1.2.3
+
+- 2022-08-05: fixes to thesauri.
+- 2022-08-04:
+  - updated thesauri.
+
+## 1.2.2
+
+- 2022-08-04: updated codicology dependencies where `CodDecorationArtist` has been modified.
+- 2022-08-03: updated codicology dependencies where `CodWatermark` has been modified.
+
+## 1.2.1
+
+- 2022-07-21: updated packages.
+
+## 1.2.0
+
+- 2022-06-19: updated packages using new graph subsystem.
+
+## 1.1.1
+
+- 2022-05-18: updated packages.
+
+## 1.1.0
+
+- 2022-04-26: updated packages for NET 6.0.
+
+## 1.0.1
+
+- 2022-03-18: fixes to part models and package updates.
+
+## 1.0.0
+
+- updated packages.

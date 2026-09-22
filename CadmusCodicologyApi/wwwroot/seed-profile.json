@@ -12,7 +12,7 @@
           "description": "Current and historical shelfmarks.",
           "colorKey": "AF6455",
           "groupKey": "general",
-          "sortKey": "a"
+          "sortKey": "01"
         },
         {
           "typeId": "it.vedph.codicology.bindings",
@@ -20,7 +20,7 @@
           "description": "Current and historical bindings.",
           "colorKey": "AF6465",
           "groupKey": "material",
-          "sortKey": "b"
+          "sortKey": "02"
         },
         {
           "typeId": "it.vedph.codicology.sheet-labels",
@@ -28,7 +28,7 @@
           "description": "Quires and sheets labels.",
           "colorKey": "DAA520",
           "groupKey": "material",
-          "sortKey": "c"
+          "sortKey": "03"
         },
         {
           "typeId": "it.vedph.codicology.material-dsc",
@@ -36,7 +36,7 @@
           "description": "Material description.",
           "colorKey": "C880C4",
           "groupKey": "material",
-          "sortKey": "d"
+          "sortKey": "04"
         },
         {
           "typeId": "it.vedph.codicology.watermarks",
@@ -44,7 +44,7 @@
           "description": "Watermarks.",
           "colorKey": "508B5E",
           "groupKey": "material",
-          "sortKey": "e"
+          "sortKey": "05"
         },
         {
           "typeId": "it.vedph.codicology.contents",
@@ -52,7 +52,7 @@
           "description": "Contents: text.",
           "colorKey": "508B5E",
           "groupKey": "content",
-          "sortKey": "f"
+          "sortKey": "06"
         },
         {
           "typeId": "it.vedph.codicology.layouts",
@@ -60,7 +60,7 @@
           "description": "Text layouts.",
           "colorKey": "4D5EF7",
           "groupKey": "content",
-          "sortKey": "g"
+          "sortKey": "07"
         },
         {
           "typeId": "it.vedph.codicology.decorations",
@@ -68,7 +68,7 @@
           "description": "Decorations.",
           "colorKey": "F5C2B1",
           "groupKey": "content",
-          "sortKey": "h"
+          "sortKey": "08"
         },
         {
           "typeId": "it.vedph.codicology.hands",
@@ -76,7 +76,7 @@
           "description": "Hands.",
           "colorKey": "72EAF7",
           "groupKey": "content",
-          "sortKey": "i"
+          "sortKey": "09"
         },
         {
           "typeId": "it.vedph.codicology.edits",
@@ -84,7 +84,15 @@
           "description": "Supplementary edits on text.",
           "colorKey": "E72A8E",
           "groupKey": "content",
-          "sortKey": "j"
+          "sortKey": "10"
+        },
+        {
+          "typeId": "it.vedph.codicology.location-ranges",
+          "name": "location ranges",
+          "description": "Location ranges.",
+          "colorKey": "E5208E",
+          "groupKey": "miscellaneous",
+          "sortKey": "11"
         }
       ]
     }
@@ -138,6 +146,10 @@
         {
           "id": "it.vedph.codicology.layouts",
           "value": "layouts"
+        },
+        {
+          "id": "it.vedph.codicology.location-ranges",
+          "value": "location"
         },
         {
           "id": "it.vedph.codicology.material-dsc",
@@ -3002,6 +3014,9 @@
       },
       {
         "id": "seed.it.vedph.codicology.layouts"
+      },
+      {
+        "id": "seed.it.vedph.codicology.location-ranges"
       },
       {
         "id": "seed.it.vedph.codicology.material-dsc"
